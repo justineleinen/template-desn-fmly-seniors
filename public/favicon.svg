@@ -1,11 +1,1 @@
-<script>
-import { createIcons, graduationCap } from 'lucide';
 
-createIcons({
-  icons: {
-    graduationCap
-  }
-});
-</script>
-
-<i data-lucide="graduation-cap"></i>  
