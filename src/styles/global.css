@@ -1,15 +1,24 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  padding: 2rem;
+  font-family: 'Playfair Display', serif;
+  background: #0f0f0f;
+  color: #e8e8e8;
+  padding: 3rem 2rem;
 }
 
 h1 {
-  text-transform: uppercase;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #fff;
+  border-bottom: 2px solid #f9c6d0;
+  padding-bottom: 1rem;
+  display: inline-block;
 }
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
