@@ -97,19 +97,19 @@ const { students } = data;
     <h1>Seniors &rsquo;26</h1>
     <div class="grid">
 
-      {students.map((student) => (
-        <div class="card">
-          <img src={student.image} alt={student.name} loading="lazy" />
-          <div class="card-name">
-            <span class="card-emoji">{student.favorite_emoji }</span> {student.name}
-          </div>
-          <div class="card-links">
-            <a href={student.github_permalink} target="_blank" rel="noopener">Portfolio</a>
-            <a href={student.github_profile} target="_blank" rel="noopener">GitHub</a>
-            <a href={student.codepen_profile} target="_blank" rel="noopener">CodePen</a>
-          </div>
-        </div>
-      ))}
+{students.map((student) => (
+  <div class="card">
+    <img src={student.image} alt={student.name} loading="lazy" />
+    <div class="card-name">
+      <span class="card-emoji">{student.favorite_emoji}</span> {student.name}
+    </div>
+    <div class="card-links">
+      <a href={student.github_permalink} target="_blank" rel="noopener">Portfolio</a>
+      <a href={student.github_profile} target="_blank" rel="noopener">GitHub</a>
+      <a href={student.codepen_profile} target="_blank" rel="noopener">CodePen</a>
+    </div>
+  </div>
+))}
 
     </div>
   </body>
