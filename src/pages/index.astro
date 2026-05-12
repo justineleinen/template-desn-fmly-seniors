@@ -1,116 +1,24 @@
 ---
-import data from "./data.json";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import StudentCard from "../components/StudentCard.astro";
+import data from "../data/data.json";
+
+// data object
 const { students } = data;
+// variables
+const title = 'DESN FMLY Seniors'
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>DESN Seniors</title>
-   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+<BaseLayout title={title}>
+  
+  <h1> {title} </h1>
+  
+  <main>
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    {students.map((student) => (
+      <StudentCard {...student} />
+    ))}
+  
+</main>
 
-  body {
-    font-family: 'Playfair Display', serif;
-    background: #0f0f0f;
-    color: #e8e8e8;
-    padding: 3rem 2rem;
-  }
-
-  h1 {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    font-weight: 700;
-    margin-bottom: 3rem;
-    color: #fff;
-    border-bottom: 2px solid #f9c6d0;
-    padding-bottom: 1rem;
-    display: inline-block;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .card {
-    background: #1a1a1a;
-    border: 1px solid #2a2a2a;
-    overflow: hidden;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-  }
-
-  .card:hover {
-    transform: translateY(-6px);
-    border-color: #f9c6d0;
-  }
-
-  .card img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    display: block;
-  }
-
-  figcaption {
-    padding: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .card-name {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #fff;
-  }
-
-  .card-links {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .card-links a {
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #0f0f0f;
-    background: #f9c6d0;
-    text-decoration: none;
-    padding: 0.3rem 0.65rem;
-    transition: background 0.2s ease;
-  }
-
-  .card-links a:hover {
-    background: #fff;
-  }
-</style>
-  </head>
-  <body>
-    <h1>Seniors &rsquo;26</h1>
-    <div class="grid">
-
-{students.map((student) => (
-  <div class="card">
-    <img src={student.image} alt={student.name} loading="lazy" />
-    <div class="card-name">
-      <span class="card-emoji">{student.favorite_emoji}</span> {student.name}
-    </div>
-    <div class="card-links">
-      <a href={student.github_permalink} target="_blank" rel="noopener">Portfolio</a>
-      <a href={student.github_profile} target="_blank" rel="noopener">GitHub</a>
-      <a href={student.codepen_profile} target="_blank" rel="noopener">CodePen</a>
-    </div>
-  </div>
-))}
-
-    </div>
-  </body>
-</html>
+</BaseLayout>
