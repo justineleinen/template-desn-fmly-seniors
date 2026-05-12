@@ -1,22 +1,16 @@
-# DESN FMLY Seniors (template)
+# DESN Seniors '26 - Class Roster
 
-## Why? 
-* Listing of data (rosters) should be dynamic for current and future use
-* Users should have ability to submit their own content via forms
-* Data should not be hard-coded. Repeat, data should not be hard-coded.
+**Justine Leinen**  
+DESN Fmly Seniors Project - Spring 2026
 
-## Goals
-* Build and design the Astro front-end framework
-* Learn dynamic web templating concepts via Astro 
-* Utilzie components and sub components nested and inherited layouts
-* Programmatically create a listing (roster) of information
-* Practice iteraing an MVP (minimal viable project) to a complete version 1.0
+## About
+A class roster built with the Astro framework, styled with a dark moody aesthetic and pastel accents.
 
-## Commands
-All commands are run from the `/` root of the project:
+## Links
+- [Live Site](https://template-desn-fmly-seniors-5ns.pages.dev)
+- [GitHub Repo](https://github.com/justineleinen/template-desn-fmly-seniors)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                             |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Notes
+- Built using Astro, deployed via Cloudflare Pages
+- Data loaded from JSON
+- Semantic HTML using figure/figcaption for card components
